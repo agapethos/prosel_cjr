@@ -10,17 +10,21 @@ html, body {
 }
 html {
 	background-image: url('viajante.jpg');
-	background-size:100% 100vh;
+	width: 100vw;
+	height: 100vh;
+	background-position: left;
+	background-size: cover;
 	background-repeat: no-repeat;
+	display:flex;
+	justify-content: center;
+	align-items:center;
 }
 body {
 	height: 500px;
 	width: 400px;
 	flex-direction: column;
-	margin-top: 5%;
 	background: #3a3a3a;
 	border:#4f4f4f solid thick;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
     border-radius: 8px; /* Bordas arredondadas */
 }
 button{
