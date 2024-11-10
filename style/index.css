@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+html {
+	background-image: url('/recursos/viajante.jpg');
+	width: 100vw;
+	height: 100vh;
+	background-position: left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+body {
+	height: 500px;
+	width: 400px;
+	flex-direction: column;
+	background: #3a3a3a;
+	border:#4f4f4f solid thick;
+    border-radius: 8px; /* Bordas arredondadas */
+}
+button{
+	cursor: pointer;
+	padding: 50px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 300px;
+	font-size:x-large;
+	border: solid black;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+button:hover{
+	opacity: 0.8;
+}
+p {
+	color: wheat;
+	width: 350px;
+	font-size: large;
+}
+.b-gnomo {
+	background: #440839;
+	color: #086908;
+}
+.b-cavaleiro{
+	background: darkred;
+	color:gold;
+	margin-bottom: 20px;
+}
