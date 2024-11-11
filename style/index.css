@@ -25,7 +25,7 @@ body {
 	flex-direction: column;
 	background: #3a3a3a;
 	border:#4f4f4f solid thick;
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 8px;
 }
 button{
 	cursor: pointer;
@@ -36,8 +36,8 @@ button{
 	width: 300px;
 	font-size:x-large;
 	border: solid black;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
-    border-radius: 8px; /* Bordas arredondadas */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 button:hover{
