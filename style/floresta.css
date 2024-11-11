@@ -16,6 +16,10 @@ html {
 }
 
 body {
+    background: transparent;
+}
+
+#nav {
 
     display: table;
     text-align: center;
@@ -45,6 +49,12 @@ a {
 }
 
 a:hover {
-    transition: 0.3s;
+    transition: .3s;
     background: #7a0043;
+}
+
+.slider {
+    margin-top: 50%;
+    height: 400px;
+    overflow: hidden;
 }
