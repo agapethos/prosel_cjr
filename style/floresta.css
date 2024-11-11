@@ -5,7 +5,7 @@
 
 html {
     transition: 1s;
-    background-image: url('/recursos/gnomes.jpg');
+    background-image: url('../recursos/gnomes.jpg');
 	width: 100vw;
 	height: 100vh;
 	background-position: center;
