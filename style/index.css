@@ -1,59 +1,84 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Faculty+Glyphic&family=Montaga&display=swap');
+*{
+	font-family:"Montaga", serif;
 }
-html, body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+body {
+	margin:0;
 }
-html {
-	background-image: url('../recursos/viajante.jpg');
-	width: 100vw;
-	height: 100vh;
-	background-position: left;
-	background-size: cover;
-	background-repeat: no-repeat;
+.background{
+	background:url("../recursos/viajante.jpg");
+	height:100dvh;
+	background-size:cover;
+	background-repeat:no-repeat;
 	display:flex;
 	justify-content: center;
 	align-items:center;
+	@media screen and (max-width:500px){
+		background-position:-11rem;
+	}
 }
-body {
-	height: 500px;
-	width: 400px;
-	flex-direction: column;
-	background: #3a3a3a;
-	border:#4f4f4f solid thick;
-    border-radius: 8px;
+.menu{
+	border:1px solid white;
+	height:60%;
+	width:25%;
+	background:linear-gradient(45deg,black, rgb(32,32,32));
+	opacity:90%;
+	border-radius:30px;
+	display:flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction:column;
+	@media screen and (min-width:769px) and (max-width:1000px){
+		width:50%;
+		height:60%;
+	}
+	@media screen and (max-width:768px){
+		width:65%;
+		height:50%;
+	}
 }
-button{
-	cursor: pointer;
-	padding: 50px;
-	margin-top: 20px;
-	margin-left: 20px;
-	margin-right: 20px;
-	width: 300px;
-	font-size:x-large;
-	border: solid black;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+#title{
+	text-align:center;
+	font-size:1.5rem;
+	color:#f5deb3;
+	padding:1em;
+	margin-bottom:2rem;
+	@media screen and (max-width:768px){
+		font-size:0.8rem;
+		margin-bottom:1rem;
+	}
+}
+.button{
+	color:white;
+	margin:2rem;
+	transition:all 0.3s ease;
+	width:60%;
+	text-align:center;
+	text-decoration: none;
+	@media screen and (max-width:768px){
+		width:60%;
+		margin:1.5rem;
+	}
+	&:hover{
+		transform:translateY(-10px);
+		cursor:pointer;
+		border:1px solid white;
+	}
 }
 
-button:hover{
-	opacity: 0.8;
+#gnomo{
+	background:linear-gradient(red,orange);
+	padding:1rem;
+	border-radius:20px;
 }
-p {
-	color: wheat;
-	width: 350px;
-	font-size: large;
+#cavaleiro{
+	background:linear-gradient(green,limegreen);
+	padding:1rem;
+	border-radius:20px;
 }
-.b-gnomo {
-	background: #440839;
-	color: #086908;
-}
-.b-cavaleiro{
-	background: darkred;
-	color:gold;
-	margin-bottom: 20px;
+#buttonText{
+	font-size:1.5rem;
+	@media screen and (max-width:768px){
+		font-size:0.8rem;
+	}
 }

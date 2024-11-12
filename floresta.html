@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta content="UTF-8">
     <link rel="stylesheet" href="style/floresta.css"/>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <title>Vila dos Gnomos</title>
 </head>
-<audio src="recursos/gnomes.wav" autoplay loop></audio>
+
 <body>
-    <ul id="nav">
-        <li><a href="">Centro</a></li>
-        <li><a href="">Itens</a></li>
-        <li><a href="index.html">Viajar</a></li>
-    </ul>
-    <div class="slider">
-        <div>
-            <h1 id="loja-head">Loja</h1>
+    <audio src="./recursos/gnomes.wav" autoplay loop preload="auto"></audio>
+
+    <section class="background">
+        <nav id="navBar">
+            <a class="buttons">Centro</a>
+            <a class="buttons">Itens</a>
+            <a class="buttons" href="./index.html">Viajar</a>
+            <div class="burger-menu">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-menu">
+                    <a class="mobile-buttons">Centro</a>
+                    <a class="mobile-buttons">Itens</a>
+                    <a class="mobile-buttons" href="./index.html">Viajar</a>
+                </div>
+            </div>
+        </nav>
+        <div class="carrousel">
+            <h2 id="lojaTitle">Loja</h2>
+            <div class="carousel-container">
+                <div class="carrouselImgs">
+                    <img src="./recursos/cogumelo.png" class="carousel-slide active">
+                    <img src="./recursos/passarinho.png" class="carousel-slide">
+                    <img src="./recursos/podefada.png" class="carousel-slide">
+                </div>
+                <button class="carousel-button prev">&#8249;</button>
+                <button class="carousel-button next">&#8250;</button>
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
         </div>
-        <input type="radio" name="radio-btn" id="radio1"/>
-        <input type="radio" name="radio-btn" id="radio2"/>
-        <input type="radio" name="radio-btn" id="radio3"/> 
-        <div>
-            <input type="image" src="recursos/cogumelo.png" name="image-btn" id="image1" alt="Cogumelo mágico">
-        </div>
-        <div>
-            <input type="image" src="recursos/passarinho.png" name="image-btn" id="image2" alt="Passarinho engaiolado">
-        </div>
-        <div>
-            <input type="image" src="recursos/podefada.png" name="image-btn" id="image3" alt="Pó de fada">
-        </div>
-        <div class="navigation-auto">
-            <div id="auto-btn1"></div>
-            <div id="auto-btn2"></div>
-            <div id="auto-btn3"></div>
-        </div>
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label> 
-        </div>
-    </div>
+    </section>
+
+    <script src="./script/index.js"></script>
 </body>
 </html>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-	<link rel="stylesheet" href="style/index.css"/>
-	<title>Pé na estrada...</title>
-</head>
-<audio src="recursos/viajando.wav" autoplay loop></audio>
-<body>
-	<p>Um aventureiro não tem onde repousar a nuca. Qual será seu próximo destino?</p>
-	<form action="floresta.html">
-		<div>
-		<button type="submit" class="b-gnomo">Vila dos Gnomos</button>
-		</div>
-	</form>
-	<form action="acampamento.html">
-		<div>
-		<button type="submit" class="b-cavaleiro">Acampamento dos Cavaleiros</button>
-		</div>
-	</form>	
+	<head>
+		<meta content="UTF-8">
+		<meta name="viewport" content="width=device-width" initial-scale="1.0">
+		<link rel="stylesheet" href="style/index.css"/>
+		<title>Pé na estrada...</title>
+	</head>
+
+
+	<body>
+		<audio src="recursos/viajando.wav" autoplay loop preload="auto"></audio>
+
+		<section class="background">
+			<div class="menu">
+				<h1 id="title">Um aventureiro não tem onde repousar a nuca. Qual será seu próximo destino?</h1>
+				<a class="button" id="gnomo" href="./floresta.html"><span id="buttonText">Vila dos gnomos</span></a>
+				<a class="button" id="cavaleiro"><span id="buttonText">Acampamento dos cavaleiros</span></a>
+			</div>
+			
+		</section>
 </body>
 </html>

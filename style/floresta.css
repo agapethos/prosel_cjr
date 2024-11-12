@@ -1,131 +1,246 @@
-* {
-	margin: 0;
-	padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Faculty+Glyphic&family=Montaga&display=swap');
+*{
+	font-family:"Montaga", serif;
+    font-weight:bolder;
 }
-
-html {
-    transition: 1s;
-    background-image: url('../recursos/gnomes-lowBright.jpg');
-	width: 100vw;
-	height: 100vh;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+body{
+    margin:0;
 }
-
-body {
-    background: transparent;
+.background{
+    background:url("../recursos/gnomes-lowBright.jpg");
+    height:100vh;
+    background-size:cover;
+    background-repeat:none;
+    background-position: center;
 }
+#navBar{
+    width:75vw;
+    height:75px;
+    background:linear-gradient(90deg, purple,#361633);
+    opacity:0.95;
+    position:absolute;
+    top:0;
+    left:12.5%;
+    display:flex;
+    justify-content:center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    align-items:center;
+    border:2px solid #361633;
+    gap:3.5rem;
 
-#nav {
-    display: inline-block;
-    width: 100vw;
-    text-align: center;
-    height: 82px;
-    border-bottom: solid rgba(79,79,79,1);
-    background: rgba(56, 20, 51, .97);
 }
-
-ul {
-    text-align: center;
-    list-style: none;
-}
-
-li {
-    display: inline-block;
-    margin: 20px;
-    padding-inline: 10px;
-}
-
-a {
+.buttons{
+    font-size: 1.75rem;
+    color: white;
     text-decoration: none;
-    color: white;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: bolder;
-}
-
-a:hover {
-    transition: .3s;
-    background: #7a0043;
-}
-
-.slider {
-    display: flex;
-    margin: auto;
-    margin-top: 10%;
-    width: 700px;
-    height: 500px;
-    overflow: hidden;
-    background: rgba(0,0,0,0.8);
-    border: solid white thick;
-    border-radius: 12px;
-}
-
-#loja-head {
-    color: white;
-    background: grey;
-    margin-left: 0;
-    font: 28px;
-    width: fit-content;
-    border-bottom: solid white;
-    border-right: solid white;
-}
-
-.slider input[type="radio"] {
-    display: none;
-}
-
-.slider input[type="image"] {
-    margin-top: 65px;
-    align-items: center;
-    height: 350px;
-    width: 450px;
-    margin-left: 35px;
-    margin-right: 200px;
     position: relative;
-    padding: 15px;
-
+    transition: all 0.5s ease;
+    cursor:pointer;
+    &:hover{
+        font-size:2rem;
+    }
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 }
 
-.slider input[type="image"]:hover {
-    border: solid white;
-    border-radius: 40px;
-}
-
-.navigation-manual {
+.buttons::after {
+    content: '';
     position: absolute;
-    width: 700px;
-    margin-left: 15%;
-    margin-top: 28%;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.buttons:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 2.5%;
+    right: 20%;
+    z-index: 100;
+    
+    @media screen and (max-width: 500px) {
+        display: block;
+    }
+}
+
+.burger-icon {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    transition: 0.25s ease-in-out;
+}
+
+.burger-icon span:nth-child(1) { top: 0px; }
+.burger-icon span:nth-child(2) { top: 10px; }
+.burger-icon span:nth-child(3) { top: 20px; }
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: linear-gradient(90deg, purple, #361633);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.mobile-buttons {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+.carrousel{
+    width:37.5vw;
+    height:50vh;
+    position:absolute;
+    top:calc(50% - 22.5vh);
+    left:calc(50% - 37.5vw/2);
+    border:3px solid white;
+    border-radius:30px;
+    background-color:rgba(0,0,0,0.75);
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-direction: column;
+    gap:1rem;
+
+    @media screen and (max-width: 500px) {
+        width: 90%;
+        height: 60%;
+        left: 5%;
+        top: calc(50% - 30vh);
+    }
+}
+#lojaTitle{
+    text-align:center;
+    color:white;
+    font-size:1.75rem;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1.25rem;
+        margin: 0.5rem 0;
+    }
+}
+.carrouselImgs{
+    height:75%;
+    width:55%;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 500px) {
+        width: 80%;
+        height: 70%;
+    }
+}
+img{
+    width:100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 10px;
+    }
 }
 
-.manual-btn {
-    border: solid white 2px;
-    border-radius: 10px;
-    padding: 5px;
+.carousel-slide {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: contain;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding:1rem;
+    border: none;
     cursor: pointer;
-    transition: 1s;
+    font-size: 2rem;
+    border-radius: 100%;
+    transition: background 0.3s ease;
+
+    @media screen and (max-width: 500px) {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
 }
 
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
 
-.manual-btn:hover {
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
     background: white;
- }
-
- #radio1:checked ~ .first{
-    margin-left: 0;
- }
-  #radio2:checked ~ .first{
-    margin-left: 25%;
- }
-  #radio3:checked ~ .first{
-    margin-left: 50%;
- }
+}
