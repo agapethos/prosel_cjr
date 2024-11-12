@@ -13,22 +13,19 @@
     </ul>
     <div class="slider">
         <div>
-            <h1 id="loja-h1">Loja</h1>
+            <h1 id="loja-head">Loja</h1>
         </div>
         <input type="radio" name="radio-btn" id="radio1"/>
         <input type="radio" name="radio-btn" id="radio2"/>
         <input type="radio" name="radio-btn" id="radio3"/> 
-        <div class="slide">
-            <img src="../prosel_cjr/recursos/cogumelo.png" alt="Cogumelo mágico"/>
-        </div>
-        <div class="slide">
-            <img src="../prosel_cjr/recursos/passarinho.png" alt="Passarinho engaiolado"/>
-        </div>
-        <div class="slide">
-            <img src="../prosel_cjr/recursos/podefada.png" alt="Pó de fada"/>
+        <div>
+            <input type="image" src="recursos/cogumelo.png" name="image-btn" id="image1" alt="Cogumelo mágico">
         </div>
         <div>
-            <b id="modal-btn">Mostrar</b>
+            <input type="image" src="recursos/passarinho.png" name="image-btn" id="image2" alt="Passarinho engaiolado">
+        </div>
+        <div>
+            <input type="image" src="recursos/podefada.png" name="image-btn" id="image3" alt="Pó de fada">
         </div>
         <div class="navigation-auto">
             <div id="auto-btn1"></div>
@@ -36,9 +33,9 @@
             <div id="auto-btn3"></div>
         </div>
         <div class="navigation-manual">
-            <label for="radio1" id="manual-btn1"></label>
-            <label for="radio2" id="manual-btn2"></label>
-            <label for="radio3" id="manual-btn3"></label> 
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label> 
         </div>
     </div>
 </body>
