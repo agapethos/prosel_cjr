@@ -29,7 +29,7 @@ body {
 	align-items: center;
 	flex-direction:column;
 	@media screen and (min-width:769px) and (max-width:1000px){
-		width:60%;
+		width:61%;
 		height:60%;
 	}
 	@media screen and (max-width:768px){
