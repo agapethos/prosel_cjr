@@ -1,29 +1,65 @@
-* {
-    padding: 0;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Faculty+Glyphic&family=Montaga&display=swap');
+*{
+	font-family:"Montaga", serif;
+    font-weight:bolder;
 }
-
-html {
-    background: url("../recursos/fogueira.gif");
+body{
+    margin:0;
+}
+.background{
+    background:url("../recursos/fogueira.gif");
     height:100vh;
     background-size:cover;
     background-repeat:none;
     background-position: center;
 }
+#navBar{
+    width:25vw;
+    height:75px;
+    background:linear-gradient(90deg, purple,#361633);
+    opacity:0.95;
+    position:absolute;
+    top:0;
+    left:calc(50% - 12.5vw);
+    display:flex;
+    justify-content:center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    align-items:center;
+    border:2px solid #361633;
+    gap:3.5rem;
 
-body {
-    display: flex;
+}
+.buttons{
+    font-size: 1.75rem;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor:pointer;
+    &:hover{
+        font-size:2rem;
+    }
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 }
 
-.link {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+.buttons::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
 }
-a {
-    text-decoration-line: none;
-    border-radius: 5px;
-    color: black;
-    background: rgba(255, 255, 255, .5);
 
- }
+.buttons:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
