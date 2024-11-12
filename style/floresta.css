@@ -5,14 +5,12 @@
 
 html {
     transition: 1s;
-    background-image: url('../recursos/gnomes.jpg');
+    background-image: url('../recursos/gnomes-lowBright.jpg');
 	width: 100vw;
 	height: 100vh;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	display:flex;
-	justify-content: center;
 }
 
 body {
@@ -21,14 +19,11 @@ body {
 
 #nav {
     display: inline-block;
-    width: fit-content;
-    padding: 10px;
+    width: 100vw;
     text-align: center;
     height: 82px;
-    margin-top: 50px;
-    border-radius: 8px;
-    border: solid rgba(79,79,79,1);
-    background: rgba(56, 20, 51, 0.9);
+    border-bottom: solid rgba(79,79,79,1);
+    background: rgba(56, 20, 51, .97);
 }
 
 ul {
@@ -39,6 +34,7 @@ ul {
 li {
     display: inline-block;
     margin: 20px;
+    padding-inline: 10px;
 }
 
 a {
@@ -56,32 +52,80 @@ a:hover {
     background: #7a0043;
 }
 
-#loja-h1 {
-    color: white;
-    background: grey;
-    font: 28px;
-    text-align: left;
-    width: fit-content;
-    border-bottom: solid white;
-    border-right: solid white;
-}
-
 .slider {
-    margin-top: 45%;
-    width: 800px;
-    height: 400px;
+    display: flex;
+    margin: auto;
+    margin-top: 10%;
+    width: 700px;
+    height: 500px;
     overflow: hidden;
     background: rgba(0,0,0,0.8);
     border: solid white thick;
     border-radius: 12px;
 }
 
-.slide {
-    width: 25%;
+#loja-head {
+    color: white;
+    background: grey;
+    margin-left: 0;
+    font: 28px;
+    width: fit-content;
+    border-bottom: solid white;
+    border-right: solid white;
+}
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.slider input[type="image"] {
+    margin-top: 65px;
+    align-items: center;
+    height: 350px;
+    width: 450px;
+    margin-left: 35px;
+    margin-right: 200px;
     position: relative;
+    padding: 15px;
+
 }
 
-.slide img {
-    width: inherit;
+.slider input[type="image"]:hover {
+    border: solid white;
+    border-radius: 40px;
 }
 
+.navigation-manual {
+    position: absolute;
+    width: 700px;
+    margin-left: 15%;
+    margin-top: 28%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: solid white 2px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: white;
+ }
+
+ #radio1:checked ~ .first{
+    margin-left: 0;
+ }
+  #radio2:checked ~ .first{
+    margin-left: 25%;
+ }
+  #radio3:checked ~ .first{
+    margin-left: 50%;
+ }
