@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: url("../recursos/fogueira.gif");
+    height:100vh;
+    background-size:cover;
+    background-repeat:none;
+    background-position: center;
+}
+
+body {
+    display: flex;
+}
+
+.link {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+a {
+    text-decoration-line: none;
+    border-radius: 5px;
+    color: black;
+    background: rgba(255, 255, 255, .5);
+
+ }
